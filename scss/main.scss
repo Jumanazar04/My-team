@@ -1,0 +1,32 @@
+@import './veriables';
+@import '../scss/mixin';
+@import './fonts';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Livvic';
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@import './all-blocks';
+
+.btn {
+    max-width: 153px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    background: transparent;
+    padding: 9px 20px;
+}

@@ -1,0 +1,92 @@
+.storie {
+    max-width: 1440px;
+    min-height: 745px;
+    background-color:  #004047;
+    margin: 0 auto;
+    background-image: url('../images/storie-bac-image.png');
+    background-repeat: no-repeat;
+    padding: 140px 20px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        max-width: 932px;
+        margin:  0 auto;
+        text-align: center;
+        color: #FFFFFF;
+        padding-bottom: 50px;
+
+        span {
+           color: #79C8C7;
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+
+        &-box {
+            text-align: center;
+            
+            
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        color: #FFFFFF;
+        max-width: 350px;
+        
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        color: #79C8C7;
+        padding: 24px 0 2px 0;
+    }
+
+    blockquote {
+        font-size: 13px;
+        line-height: 18px;
+        font-style: italic;
+        color: #FFFFFF ;
+        padding-bottom: 32px;
+    }
+
+    @include for-tablet {
+        
+
+        &__card {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 32px;
+            max-width: 573px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 573px;
+            margin: 0 auto;
+        }
+    }
+
+    @include for-phone {
+       
+    }
+    
+    
+}
+
+.img {
+    width: 62px;
+}

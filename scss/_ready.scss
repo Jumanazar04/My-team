@@ -1,0 +1,53 @@
+.ready {
+    max-width: 1440px;
+    min-height: 200px;
+    background: #F67E7E;
+    margin: 0 auto;
+    background-image: url('../images/ready-bac-img.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    padding-top: 76px;
+
+    &__card {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__btn {
+        max-width: 153px;
+        height: 48px;
+        font-weight: 500;
+        border: 2px solid #000000;
+        border-radius: 24px;
+        background: transparent;
+        padding: 9px 30px;
+        font-family: 'Livvic';
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        color: #012F34;
+    }
+
+    @include for-tablet {
+        h2 {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+
+    @include for-phone {
+        &__card {
+            flex-direction: column;
+            row-gap: 24px;
+            align-items: center;
+            h2 {
+                max-width: 327px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}

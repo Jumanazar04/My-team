@@ -1,0 +1,219 @@
+.menu {
+    display: flex;
+    column-gap: 80px;
+    align-items: center;
+
+    &__box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+
+        @include for-phone {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2C6269;
+            transform: translateY(-100%);
+            row-gap: 40px;
+        }
+
+        &__lbl {
+            position: absolute;
+            top: 20px;
+            right: 2px;
+        }
+        
+
+        &-bar {
+            display: flex;
+            column-gap: 40px;
+            
+            @include for-phone {
+                flex-direction: column;
+                row-gap: 40px;
+
+               
+            }
+        }
+
+    }
+
+    &__box-lbl {
+        display: none;
+        @include for-phone {
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: 40px;
+        }
+    }
+
+    @include for-tablet {
+        column-gap: 50px;
+
+
+    }
+
+    
+    @include for-phone {
+        justify-content: space-between;
+        
+    }
+    
+    
+   
+}
+
+
+
+.menu__box-input {
+    display: none;
+}
+
+
+
+.menu__box-input:checked~.menu__box {
+    transform: translateY(0);
+}
+
+.menu__lbl {
+    display: none;
+    @include for-phone {
+        display: block;
+        
+
+    }
+}
+
+
+
+.menu__box-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: 'Livvic';
+}
+
+.header {
+    max-width: 1440px;
+    background-image:  url('../images/header-bac-image.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    min-height: 700px;
+    background-color: $main-big;
+    margin: 0 auto;
+
+    @include for-tablet {
+        background-image: url('../images/headeribac-img-2.png');
+        background-position-y: bottom ;
+        background-position-x: center;
+    }
+
+    @include for-phone {
+        min-height: 567px;
+
+    }
+    
+}
+nav {
+    padding: 50px 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    margin: 130px 0 200px 0;
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+
+        &-hr {
+            max-width: 50px;
+            height: 4px;
+            background: #79C8C7;
+        
+        }
+    }
+    h1 {
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 100px;
+        color: #FFFFFF;
+        max-width: 635px;
+        span {
+            color: #F67E7E;
+        }
+    }
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 445px;
+        color: #FFFFFF;
+        padding-top: 79px;
+    }
+
+    @include for-large-tablet {
+        h1 {
+            font-size: 80px;
+            line-height: 70px;
+        }
+    }
+
+    @include for-tablet {
+        
+        margin: 90px 0 0 0 ;
+
+        &__card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 457px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 28px;
+            padding-top: 30px;
+        }
+
+        h1 {
+            margin:  0 auto;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 56px;
+        }
+
+        hr {
+            display: none;
+        }
+    }   
+
+    @include for-phone {
+        margin: 80px 0 0 0 ;
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 28px;
+            max-width: 327px;
+        }
+    }
+}
